@@ -1,7 +1,7 @@
 module.exports = {
     roots: ['<rootDir>/src'],
     // setupFiles: ["<rootDir>/src/setupTests.ts"],
-    setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+    setupFilesAfterEnv: ['<rootDir>/home/runner/work/conversor-divisas/conversor-divisas'],
     transform: {
         '^.+\\.tsx?$': 'ts-jest',
         '^.+\\.svg$': '<rootDir>/jest.file.js'
