@@ -11,6 +11,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
+  
  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,33 +40,3 @@ jobs:
       - name: Run prettier
         run:  npm run prettier
          
-      - name: Configure Git User
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
- 
-        # Get version number and save it in a variable
-      - name: Get package version
-        run: echo "::set-output name=tag-version::$(jq '.version' package.json | sed 's/-SNAPSHOT.0//' | xargs npm version --no-git-tag-version | sed 's/v//')"
-        id: version
-        shell: bash
- 
- 
-        # Allows you to release using an already created tag, if the given tag does not exist it will fail
-      - name: Create GitHub Release
-        uses: ncipollo/release-action@v1
-        with:
-          generateReleaseNotes: true
-          tag: ${{ steps.version.outputs.tag-version }}
-          token: ${{ secrets.GITHUB_TOKEN }}
- 
-        # Prepare prerelease with the preid SNAPSHOT (ex.: 0.0.0-SNAPSHOT.0)
-      - name: Create SNAPSHOT
-        run:  npm version prerelease --preid SNAPSHOT --no-git-tag-version
- 
-      - name: Update version in remote
-        run: |
-          git add package.json
-          git add package-lock.json
-          git commit -m "Update SNAPSHOT"
-          git push
