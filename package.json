@@ -1,7 +1,10 @@
 {
   "devDependencies": {
     "eslint": "^8.53.0",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "jest": "27.5.1",
+    "jest-fetch-mock": "3.0.3",
+    "ts-jest": "27.1.3"
   },
   "name": "CONVERSOR-DIVISAS",
   "description": "",
@@ -98,7 +101,9 @@
   "scripts": {
     "test": "npm run test:unit:coverage",
     "lint":"npx eslint .",
-    "prettier":"prettier --write ."
+    "prettier":"prettier --write .",
+    "test:unit": "jest --watchAll=true",
+    "test:unit:coverage": "npm run test:unit -- --watchAll=false --coverage"
   },
   "keywords": [],
   "author": "",
