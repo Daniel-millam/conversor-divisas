@@ -100,7 +100,7 @@
   },
   "scripts": {
     "test": "npm run test:unit:coverage",
-    "build": "react-scripts build",
+    "build": "npm run compile",
     "lint": "npx eslint .",
     "prettier": "prettier --write .",
     "test:unit": "jest --watchAll=true",
