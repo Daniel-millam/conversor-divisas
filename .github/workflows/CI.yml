@@ -50,7 +50,7 @@ jobs:
         shell: bash
  
       - name: Build
-        run: npm run build
+        run: npm i
  
         # Allows you to release using an already created tag, if the given tag does not exist it will fail
       - name: Create GitHub Release
