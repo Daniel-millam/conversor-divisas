@@ -10,7 +10,9 @@ const tazaEl = document.getElementById('taza');
 function calculate(){
     const moneda_one = monedaEl_one.value;
     const moneda_two = monedaEl_two.value;
+    const cantidad_one = parseFloat(cantidadEl_one.value);
 
+    if(cantidad_one>0){
    fetch(`https://api.exchangerate-api.com/v4/latest/${moneda_one}`)
    .then(res => res.json() )
    .then(data => {
@@ -22,6 +24,10 @@ function calculate(){
 
     } );
     
+}else{
+    cantidadEl_two.value = 'Ingrese un valor válido';
+        cambioEl.innerText = '';
+}
 }
 
 //Event listeners
