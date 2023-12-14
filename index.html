@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Conversor de moneda</title>
+    
 </head>
 <body>
 
-    <img src="img/icono.png" alt="" class="conversor-imagen">
-    <h1>Conversor de moneda</h1>
-    <p>Escoje la moneda y la cantidad para realizar la conversion</p>
+    
+    
     
     <div class="container">
+        <img src="img/logo.png" alt="Conversor de monedas" class="conversor-imagen">
+        <h1>Conversor de moneda</h1>
+    <p>Escoje la moneda y la cantidad para realizar la conversion</p>
         <div class="moneda">
             <select id="moneda-uno">
-              <option value="ARS">ARS</option>
-              <option value="EUR" selected>EUR</option>
-              <option value="CLP">CLP</option>
-              <option value="USD">USD</option>
-              <option value="VES">VES</option>
+                <option value="ARS">Peso Argentino(ARS)🇦🇷</option>
+                <option value="EUR" selected>Euro(EUR)🇪🇺</option>
+                <option value="CLP">Peso Chileno(CLP)🇨🇱</option>
+                <option value="USD">Dólar Estadounidense(USD)🇺🇸</option>
+                <option value="VES">Bolívar Venezolano(VES)🇻🇪</option>
 
             </select>
 
@@ -32,24 +35,23 @@
             >
 
         </div>
-
         <div class="taza-cambio-container">
             <button class="btn" id="taza">
-                cambio
+                CAMBIO
             </button>
 
-            <div class="cambio" id="cambio"></div>
-
-        </div>
+            
+    
+      </div>
 
         <div class="moneda">
             <select id="moneda-dos">
                
-                <option value="ARS">ARS</option>
-                <option value="EUR" selected>EUR</option>
-                <option value="CLP">CLP</option>
-                <option value="USD">USD</option>
-                <option value="VES">VES</option>
+                <option value="ARS">Peso Argentino(ARS)🇦🇷</option>
+                <option value="EUR" selected>Euro(EUR)🇪🇺</option>
+                <option value="CLP">Peso Chileno(CLP)🇨🇱</option>
+                <option value="USD">Dólar Estadounidense(USD)🇺🇸</option>
+                <option value="VES">Bolívar Venezolano(VES)🇻🇪</option>
                 
 
 
@@ -62,7 +64,11 @@
             >
 
         </div>
+        <div class="cambio" id="cambio"></div>
     </div>
+    
+
+        
 
 <script src="./assets/script/script.js"></script>
 </body>
